@@ -31,4 +31,5 @@ print(f"{temp_C} °C equivalem {convert_to_F} °F.")
 import math
 raio_circulo = float(input("Digite o raio do circulo em cm: "))
 area_circulo = math.pi * (raio_circulo ** 2)
-print(f"A area do circulo equivale {area_circulo} cm².")
+# area_do_circulo_formatada = "{:.2f}".format{area_circulo}
+print(f"A area do circulo equivale {area_circulo:.2f} cm².")
