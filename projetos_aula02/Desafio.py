@@ -24,6 +24,6 @@ try:
         calc_kpi = 1000 + salary_user * percent_bonus
         print(f"Olá {name_user}, o seu valor bônus foi de R$ {calc_kpi}")
     else:
-        print("Você digitou o bonus no formato incorreto ou fora do range solicitado!")
+        print("Você digitou o bonus no formato incorreto ou fora do range!")
 except ValueError:
     print("Erro: Há variaveis que não segue o requisito solicitado. Revise!")
