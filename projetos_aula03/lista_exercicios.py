@@ -3,15 +3,16 @@
 # que todos os registros tenham valores positivos para `quantidade` e `preço`. 
 # Escreva um programa que verifique esses campos e imprima "Dados válidos" se ambos 
 # forem positivos ou "Dados inválidos" caso contrário.
-# try:
-#     quantidade = int(input("Digite a quantidade vendida (inteiro): "))
-#     preco = float(input("Digite o preço (Decimal): "))
-#     if quantidade > 0 and preco > 0:
-#         print("Dados válidos!")
-#     else:
-#         print("Dados inválidos!")
-# except ValueError:
-#     print("Por favor, digite números válidos.")
+
+try:
+    quantidade = int(input("Digite a quantidade vendida (inteiro): "))
+    preco = float(input("Digite o preço (Decimal): "))
+    if quantidade > 0 and preco > 0:
+        print("Dados válidos!")
+    else:
+        print("Dados inválidos!")
+except ValueError:
+    print("Por favor, digite números válidos.")
 
 ### Exercício 2: Classificação de Dados de Sensor
 # Imagine que você está trabalhando com dados de sensores IoT. 
@@ -38,11 +39,25 @@ except ValueError:
 # como `log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}`, 
 # escreva um programa que imprima a mensagem se a severidade for 'ERROR'.
 
+log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}
+if log['level'] == 'ERROR':
+    print(log['message'])
+
 ### Exercício 4: Validação de Dados de Entrada
 # Antes de processar os dados de usuários em um sistema de recomendação, 
 # você precisa garantir que cada usuário tenha idade entre 18 e 65 anos e tenha 
 # fornecido um email válido. Escreva um programa que valide essas condições 
 # e imprima "Dados de usuário válidos" ou o erro específico encontrado.
+
+idade = int(input("Digite a idade: "))
+email = "usuario@exemplo.com"
+
+if 18 > idade > 65:
+    print("Idade inválida: A idade do usuário deve ser entre 18 a 65 ano!")
+elif "@" not in email or "." not in email:
+    print("Email inválido!")
+else:
+    print("Dados de usuário válidos!")
 
 ### Exercício 5: Detecção de Anomalias em Dados de Transações
 # Você está trabalhando em um sistema de detecção de fraude e precisa identificar 
