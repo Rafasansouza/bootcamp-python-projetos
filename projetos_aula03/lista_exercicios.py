@@ -154,6 +154,7 @@ while entrada.lower() != "sair":
 # Simular o consumo de uma API paginada, onde cada "página" de dados é processada em loop até que não haja mais páginas.
 
 ### Exercício 14. Tentativas de Conexão
+
 # Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
 
 ### Exercício 15. Processamento de Dados com Condição de Parada
