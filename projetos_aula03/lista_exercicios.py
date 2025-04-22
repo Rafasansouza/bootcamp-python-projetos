@@ -152,6 +152,11 @@ print("Os valores digitados foram:", dados)
 ### Exercício 12. Validação de Entrada
 # Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
 
+numero = 0
+while numero not in range(1,10):
+    numero = int(input("Digite um numero entre 1 e 10: "))
+print("O numero que voê digitou foi: ", numero)
+
 ### Exercício 13. Consumo de API Simulado
 # Simular o consumo de uma API paginada, onde cada "página" de dados é processada em loop até que não haja mais páginas.
 
