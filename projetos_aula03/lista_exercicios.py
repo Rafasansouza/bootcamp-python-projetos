@@ -171,8 +171,17 @@ while pagina_atual <= paginas_totais:
 print("Todas as páginas foram processadas.")
 
 ### Exercício 14. Tentativas de Conexão
-
 # Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
+
+pagina_atual = 1
+paginas_totais = 5  # Simulação, na prática, isso viria da API
+
+while pagina_atual <= paginas_totais:
+    print(f"Processando página {pagina_atual} de {paginas_totais}")
+    # Aqui iria o código para processar os dados da página
+    pagina_atual += 1
+
+print("Todas as páginas foram processadas.")
 
 ### Exercício 15. Processamento de Dados com Condição de Parada
 # Processar itens de uma lista até encontrar um valor específico que indica a parada.
