@@ -146,6 +146,8 @@ entrada = ""
 while entrada.lower() != "sair":
     entrada = input("Digite um valor (ou 'sair' para terminar): ")
     if entrada.lower() != "sair":
+        dados.append(entrada)
+print("Os valores digitados foram:", dados)
 
 ### Exercício 12. Validação de Entrada
 # Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
