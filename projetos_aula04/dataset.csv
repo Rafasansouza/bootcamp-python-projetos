@@ -1,0 +1,4 @@
+nome, quantidade, preco, disponibilidade
+TV, 39, 3270.30, True
+Videogame, 16, 3970.30, False
+Notebook, 109, 4370.30, True
