@@ -1,4 +1,5 @@
 from typing import Dict, Any
+import json
 
 # Inicializa as variáveis para o controle do loop
 nome_valido: bool = False
@@ -66,4 +67,5 @@ while True:
     else:
         break
 
-print("Você calculou os seguintes bonus: \n", lista)
+print("Você calculou os seguintes bonus:")
+print(json.dumps(lista, indent=4, ensure_ascii=False))
