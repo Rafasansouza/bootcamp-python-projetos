@@ -1,0 +1,69 @@
+from typing import Dict, Any
+
+# Inicializa as variáveis para o controle do loop
+nome_valido: bool = False
+salario_valido: bool = False
+bonus_valido: bool = False
+lista: list = []
+
+while True:
+    # Loop para verificar o nome
+    while not nome_valido:
+        try:
+            nome: str = input("Digite seu nome: ")
+            if len(nome) == 0:
+                raise ValueError("O nome não pode estar vazio.")
+            elif any(char.isdigit() for char in nome):
+                raise ValueError("O nome não deve conter números.")
+            else:
+                print("Nome válido:", nome)
+                nome_valido = True
+        except ValueError as e:
+            print(e)
+
+    # Loop para verificar o salário
+    while not salario_valido:
+        try:
+            salario: float = float(input("Digite o valor do seu salário: "))
+            if salario < 0:
+                print("Por favor, digite um valor positivo para o salário.")
+            else:
+                salario_valido = True
+        except ValueError:
+            print("Entrada inválida para o salário. Por favor, digite um número.")
+
+    # Loop para verificar o bônus
+    while not bonus_valido:
+        try:
+            bonus: float = float(input("Digite o valor do bônus recebido (Entre 0 a 100% sem o %): "))/100
+            if 100 < bonus or bonus < 0:
+                print("Por favor, digite um valor entre 0 e 100 para o bônus.")
+            else:
+                bonus_valido = True
+        except ValueError:
+            print("Entrada inválida para o bônus. Por favor, digite um número.")
+
+    bonus_recebido: float = 1000 + salario * bonus  # Exemplo simples de cálculo de bônus
+    
+    #Salvando dados no dicionario e incluindo na lista
+    dados: dict[str, Any] = {
+        "Nome": nome,
+        "Salario": salario,
+        "Bonus": bonus,
+        "Calculo_Bonus": bonus_recebido
+    }
+    lista.append(dados)
+
+    # Imprime as informações para o usuário
+    print(f"{nome}, seu salário é R${salario:.2f} e seu bônus final é R${bonus_recebido:.2f}.")
+
+    # Deseja calcular mais bonus de outros usuarios
+    condicao_exit: str = input("Deseja calcular o bônus de outro usuario? (s/n) ")
+    if condicao_exit.lower() == "s":
+        nome_valido = False
+        salario_valido = False
+        bonus_valido = False
+    else:
+        break
+
+print("Você calculou os seguintes bonus: \n", lista)
