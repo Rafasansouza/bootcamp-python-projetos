@@ -52,3 +52,15 @@ def calcular_desvio_padrao(valores: List[float]) -> float:
 variancia_temperaturas = calcular_desvio_padrao(temperaturas_convertidas)
 print(variancia_temperaturas)
 
+# 6.Encontrar Valores Ausentes em uma Sequência
+
+sequencia: List[int] = [1,2,3,5,6,7,10]
+
+def encontrar_valores_ausentes(sequencia: List[int]) -> List[int]:
+    completo = set(range(min(sequencia), max(sequencia) + 1))
+    ausentes_sequencia = list(completo - set(sequencia))
+    ausentes_sequencia.sort()
+    return ausentes_sequencia
+
+valores_encontrados = encontrar_valores_ausentes(sequencia)
+print(valores_encontrados)
