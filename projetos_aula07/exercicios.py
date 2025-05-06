@@ -12,3 +12,15 @@ media_calculada = calculo_media(lista_valores)
 
 print(media_calculada)
 
+# 2.Filtrar Dados Acima de um Limite
+
+def filtrar_dados_acima(valores: List[float], limite: float) -> List[float]:
+    valores_acima: List[float] = []
+    for valor in valores:
+        if valor > limite:
+            valores_acima.append(valor)
+    return valores_acima
+
+valores_filtrados = filtrar_dados_acima(lista_valores, media_calculada)
+print(valores_filtrados)
+
