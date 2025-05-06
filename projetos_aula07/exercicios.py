@@ -42,3 +42,13 @@ def celsius_para_fahrenheit(temperaturas_celsius: List[float]) -> List[float]:
 temperaturas_convertidas = celsius_para_fahrenheit(temperaturas)
 print(temperaturas_convertidas)
 
+# 5.Calcular Desvio Padrão de uma Lista
+
+def calcular_desvio_padrao(valores: List[float]) -> float:
+    media = sum(valores) / len(valores)
+    variancia = sum((x - media) ** 2 for x in valores) / len(valores)
+    return variancia ** 0.5
+
+variancia_temperaturas = calcular_desvio_padrao(temperaturas_convertidas)
+print(variancia_temperaturas)
+
