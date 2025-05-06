@@ -33,3 +33,12 @@ def contando_valores_unicos(valores: List[float]) -> int:
 total_distinto = contando_valores_unicos(valores_filtrados)
 print(total_distinto)
 
+# 4.Converter Celsius para Fahrenheit em uma Lista
+temperaturas: List[float] = [30,45,80,90,100]
+
+def celsius_para_fahrenheit(temperaturas_celsius: List[float]) -> List[float]:
+    return [(9/5) * temp + 32 for temp in temperaturas_celsius]
+
+temperaturas_convertidas = celsius_para_fahrenheit(temperaturas)
+print(temperaturas_convertidas)
+
