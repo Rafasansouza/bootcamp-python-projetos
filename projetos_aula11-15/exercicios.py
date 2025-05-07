@@ -29,3 +29,8 @@ numero_02 = int(input("Inserir outro numero inteiro: "))
 resultado = numero_01 // numero_02
 print(resultado)
 
+# 5. Escreva um programa que calcule o quadrado de um número fornecido pelo usuário.
+
+numero_01 = int(input("Inserir um numero inteiro: "))
+resultado = numero_01 ** 2
+print(resultado)
