@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "projetos-aula09"
+version = "0.1.0"
+description = ""
+authors = [
+    "Rafael Souza <rafasansou1@gmail.com>"
+]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.12,<4.0"  
+loguru = "^0.7.3"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
