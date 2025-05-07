@@ -22,3 +22,10 @@ numero_02 = int(input("Inserir outro numero inteiro: "))
 resultado = numero_01 * numero_02
 print(resultado)
 
+# 4. Faça um programa que peça dois números inteiros e imprima a divisão inteira do primeiro pelo segundo.
+
+numero_01 = int(input("Inserir um numero inteiro: "))
+numero_02 = int(input("Inserir outro numero inteiro: "))
+resultado = numero_01 // numero_02
+print(resultado)
+
