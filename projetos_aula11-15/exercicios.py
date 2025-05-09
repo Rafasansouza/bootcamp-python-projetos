@@ -37,6 +37,8 @@ print(resultado)
 
 # #### Números de Ponto Flutuante (`float`)
 
+import math
+
 # 6. Escreva um programa que receba dois números flutuantes e realize sua adição.
 
 numero_01: float = float(input("Inserir um numero float: "))
@@ -44,15 +46,39 @@ numero_02: float = float(input("Inserir outro numero float: "))
 resultado: float = numero_01 + numero_02
 print(resultado)
 
-# 7. Crie um programa que calcule a média de dois números flutuantes fornecidos pelo usuário.
-# 8. Desenvolva um programa que calcule a potência de um número (base e expoente fornecidos pelo usuário).
-# 9. Faça um programa que converta a temperatura de Celsius para Fahrenheit.
-# 10. Escreva um programa que calcule a área de um círculo, recebendo o raio como entrada.
+# Exercício 7 - Média de dois números flutuantes
+try:
+    numero1: float = float(input("Digite o primeiro número (float): "))
+    numero2: float = float(input("Digite o segundo número (float): "))
+    media: float = (numero1 + numero2) / 2
+    print(f"A média entre {numero1} e {numero2} é: {media:.2f}")
+except ValueError:
+    print("Por favor, insira valores numéricos válidos.")
 
-#raio_do_circulo = float(input("Digite o raio: "))
-#area_do_circulo = math.pi * raio_do_circulo ** 2
-# area_do_circulo_formatada = "{:.2f}".format(area_do_circulo)
-#print(f"{area_do_circulo:.2f}")
+# Exercício 8 - Potência de um número
+try:
+    base: float = float(input("\nDigite a base da potência: "))
+    expoente: float = float(input("Digite o expoente: "))
+    potencia: float = base ** expoente
+    print(f"{base} elevado a {expoente} é: {potencia}")
+except ValueError:
+    print("Por favor, insira valores numéricos válidos.")
+
+# Exercício 9 - Conversão Celsius para Fahrenheit
+try:
+    celsius: float = float(input("\nDigite a temperatura em Celsius: "))
+    fahrenheit: float = (celsius * 9 / 5) + 32
+    print(f"{celsius}°C equivalem a {fahrenheit:.2f}°F")
+except ValueError:
+    print("Por favor, insira um valor numérico para a temperatura.")
+
+# Exercício 10 - Cálculo da área de um círculo
+try:
+    raio: float = float(input("\nDigite o raio do círculo: "))
+    area: float = math.pi * raio ** 2
+    print(f"A área do círculo com raio {raio} é: {area:.2f}")
+except ValueError:
+    print("Por favor, insira um valor numérico para o raio.")
 
 # #### Strings (`str`)
 
