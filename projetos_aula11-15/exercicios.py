@@ -113,3 +113,39 @@ string1: str = input("\nDigite a primeira string: ")
 string2: str = input("Digite a segunda string: ")
 concatenada: str = string1 + string2
 print(f"Resultado da concatenação: {concatenada}")
+
+# #### Booleanos (`bool`)
+
+# Exercício 16 - Operação AND entre duas expressões booleanas
+entrada_1: str = input("Digite a primeira expressão booleana (True ou False): ")
+entrada_2: str = input("Digite a segunda expressão booleana (True ou False): ")
+bool_1: bool = entrada_1.strip().capitalize() == "True"
+bool_2: bool = entrada_2.strip().capitalize() == "True"
+resultado_and: bool = bool_1 and bool_2
+print(f"Resultado da operação AND: {resultado_and}")
+
+# Exercício 17 - Operação OR entre dois valores booleanos
+entrada_3: str = input("\nDigite o primeiro valor booleano (True ou False): ")
+entrada_4: str = input("Digite o segundo valor booleano (True ou False): ")
+bool_3: bool = entrada_3.strip().capitalize() == "True"
+bool_4: bool = entrada_4.strip().capitalize() == "True"
+resultado_or: bool = bool_3 or bool_4
+print(f"Resultado da operação OR: {resultado_or}")
+
+# Exercício 18 - Inverter um valor booleano
+entrada_5: str = input("\nDigite um valor booleano (True ou False): ")
+bool_5: bool = entrada_5.strip().capitalize() == "True"
+bool_invertido: bool = not bool_5
+print(f"Valor invertido: {bool_invertido}")
+
+# Exercício 19 - Comparar se dois números são iguais
+numero_1: float = float(input("\nDigite o primeiro número: "))
+numero_2: float = float(input("Digite o segundo número: "))
+sao_iguais: bool = numero_1 == numero_2
+print(f"Os números são iguais? {sao_iguais}")
+
+# Exercício 20 - Verificar se dois números são diferentes
+numero_3: float = float(input("\nDigite o primeiro número: "))
+numero_4: float = float(input("Digite o segundo número: "))
+sao_diferentes: bool = numero_3 != numero_4
+print(f"Os números são diferentes? {sao_diferentes}")
