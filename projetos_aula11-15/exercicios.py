@@ -82,30 +82,34 @@ except ValueError:
 
 # #### Strings (`str`)
 
-# 11. Escreva um programa que receba uma string do usuário e a converta para maiúsculas.
-# 12. Crie um programa que receba o nome completo do usuário e imprima o nome com todas as letras minúsculas.
-# 13. Desenvolva um programa que peça ao usuário para inserir uma frase e, em seguida, imprima esta frase sem espaços em branco no início e no final.
-# 14. Faça um programa que peça ao usuário para digitar uma data no formato "dd/mm/aaaa" e, em seguida, imprima o dia, o mês e o ano separadamente.
-# 15. Escreva um programa que concatene duas strings fornecidas pelo usuário.
+# Exercício 11 - Converter string para maiúsculas
+entrada_maiuscula: str = input("Digite uma palavra ou frase para converter em maiúsculas: ")
+resultado_maiuscula: str = entrada_maiuscula.upper()
+print(f"Resultado em maiúsculas: {resultado_maiuscula}")
 
-# data_do_usuario = input("Insira uma data no formato dd/mm/aaaa: ")
-# lista_de_dia_mes_ano = data_do_usuario.split("/")
-# print(f"O elemento 1 e o: {lista_de_dia_mes_ano[0]}")
-# print(f"O elemento 2 e o: {lista_de_dia_mes_ano[1]}")
-# print(f"O elemento 3 e o: {lista_de_dia_mes_ano[2]}")
+# Exercício 12 - Converter nome completo para minúsculas
+nome_completo: str = input("\nDigite seu nome completo: ")
+nome_minusculo: str = nome_completo.lower()
+print(f"Nome em minúsculas: {nome_minusculo}")
 
-# #### Booleanos (`bool`)
+# Exercício 13 - Remover espaços em branco do início e fim da frase
+frase_com_espacos: str = input("\nDigite uma frase com espaços no início e/ou fim: ")
+frase_sem_espacos: str = frase_com_espacos.strip()
+print(f"Frase sem espaços nas extremidades: '{frase_sem_espacos}'")
 
-# 16. Escreva um programa que avalie duas expressões booleanas inseridas pelo usuário e retorne o resultado da operação AND entre elas.
-# 17. Crie um programa que receba dois valores booleanos do usuário e retorne o resultado da operação OR.
-# 18. Desenvolva um programa que peça ao usuário para inserir um valor booleano e, em seguida, inverta esse valor.
-# 19. Faça um programa que compare se dois números fornecidos pelo usuário são iguais.
-# 20. Escreva um programa que verifique se dois números fornecidos pelo usuário são diferentes.
+# Exercício 14 - Separar data no formato dd/mm/aaaa
+data: str = input("\nDigite uma data no formato dd/mm/aaaa: ")
+partes_data: list[str] = data.split("/")
+if len(partes_data) == 3:
+    dia: str = partes_data[0]
+    mes: str = partes_data[1]
+    ano: str = partes_data[2]
+    print(f"Dia: {dia}, Mês: {mes}, Ano: {ano}")
+else:
+    print("Formato de data inválido. Use dd/mm/aaaa.")
 
-# #### try-except e if
-
-# 21: Conversor de Temperatura
-# 22: Verificador de Palíndromo
-# 23: Calculadora Simples
-# 24: Classificador de Números
-# 25: Conversão de Tipo com Validação
+# Exercício 15 - Concatenar duas strings
+string1: str = input("\nDigite a primeira string: ")
+string2: str = input("Digite a segunda string: ")
+concatenada: str = string1 + string2
+print(f"Resultado da concatenação: {concatenada}")
