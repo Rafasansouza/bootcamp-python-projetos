@@ -149,3 +149,69 @@ numero_3: float = float(input("\nDigite o primeiro número: "))
 numero_4: float = float(input("Digite o segundo número: "))
 sao_diferentes: bool = numero_3 != numero_4
 print(f"Os números são diferentes? {sao_diferentes}")
+
+# #### try-except e if
+
+# Exercício 21 - Conversor de Temperatura (Celsius para Fahrenheit)
+try:
+    temperatura_celsius: float = float(input("Digite a temperatura em Celsius: "))
+    temperatura_fahrenheit: float = (temperatura_celsius * 9/5) + 32
+    print(f"Temperatura em Fahrenheit: {temperatura_fahrenheit:.2f}°F")
+except ValueError:
+    print("Entrada inválida. Por favor, insira um número válido.")
+
+# Exercício 22 - Verificador de Palíndromo
+palavra: str = input("\nDigite uma palavra para verificar se é um palíndromo: ").strip()
+palavra_invertida: str = palavra[::-1]
+if palavra.lower() == palavra_invertida.lower():
+    print("É um palíndromo.")
+else:
+    print("Não é um palíndromo.")
+
+# Exercício 23 - Calculadora Simples
+try:
+    numero_1: float = float(input("\nDigite o primeiro número: "))
+    operador: str = input("Digite o operador (+, -, *, /): ").strip()
+    numero_2: float = float(input("Digite o segundo número: "))
+
+    resultado: float
+    if operador == "+":
+        resultado = numero_1 + numero_2
+    elif operador == "-":
+        resultado = numero_1 - numero_2
+    elif operador == "*":
+        resultado = numero_1 * numero_2
+    elif operador == "/":
+        if numero_2 != 0:
+            resultado = numero_1 / numero_2
+        else:
+            print("Erro: divisão por zero.")
+            resultado = None
+    else:
+        print("Operador inválido.")
+        resultado = None
+
+    if resultado is not None:
+        print(f"Resultado: {resultado}")
+except ValueError:
+    print("Erro: insira apenas números válidos.")
+
+# Exercício 24 - Classificador de Números
+try:
+    numero: float = float(input("\nDigite um número para classificar: "))
+    if numero > 0:
+        print("Número positivo.")
+    elif numero < 0:
+        print("Número negativo.")
+    else:
+        print("Número zero.")
+except ValueError:
+    print("Entrada inválida. Por favor, insira um número.")
+
+# Exercício 25 - Conversão de Tipo com Validação
+entrada: str = input("\nDigite um número inteiro: ")
+try:
+    numero_inteiro: int = int(entrada)
+    print(f"Número convertido com sucesso: {numero_inteiro}")
+except ValueError:
+    print("Erro: valor digitado não é um número inteiro válido.")
